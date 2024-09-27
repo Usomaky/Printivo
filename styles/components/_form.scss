@@ -1,0 +1,178 @@
+button,
+.button {
+  &.c-order__button {
+    background: $col-red;
+    padding: 10px 16px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "SF Pro", sans-serif;
+    font-weight: 600;
+    &:hover {
+      span {
+        &::after {
+          background-position: 13px 4px;
+        }
+      }
+    }
+
+    &.eco {
+      background: $col-green-dark;
+    }
+
+    span {
+      color: #ffffff;
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        content: "";
+        background-size: 6px;
+        background-position: 10px 4px;
+        white-space: nowrap;
+        padding-left: 20px;
+        background-repeat: no-repeat;
+        transition: background-position 0.2s;
+      }
+    }
+
+    &--green {
+      background: $col-green-dark;
+    }
+  }
+
+  &.c-design__button {
+    background: rgba(56, 74, 98, 0.1);
+    box-shadow: 0px 10px 20px 1px rgba(164, 164, 164, 0.1);
+    border-radius: 3px;
+    padding: 12px 24px;
+    font-size: 13px;
+    font-family: "SF Pro", sans-serif;
+    &:hover {
+      span {
+        &::after {
+          background-position: 13px 4px;
+        }
+      }
+    }
+
+    &.eco {
+      background: $col-green-dark;
+    }
+
+    span {
+      color: $col-blue-md;
+      letter-spacing: 0.02em;
+      font-size: 14px;
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.4051 5.99995C7.4051 6.21995 7.32511 6.41995 7.16511 6.57995L1.96511 11.58C1.80511 11.72 1.6051 11.7999 1.4051 11.7999C1.1851 11.7999 0.985095 11.7199 0.825095 11.5599C0.525095 11.2399 0.52509 10.7399 0.84509 10.4199L5.44509 5.99995L0.84509 1.57995C0.52509 1.27995 0.525095 0.759951 0.825095 0.439951C1.12509 0.119951 1.64511 0.119949 1.96511 0.419949L7.16511 5.41995C7.32511 5.57995 7.4051 5.77995 7.4051 5.99995Z' fill='%23506683'/%3E%3C/svg%3E%0A");
+        content: "";
+        background-size: 7px;
+        background-position: 10px 4px;
+        white-space: nowrap;
+        padding-left: 20px;
+        background-repeat: no-repeat;
+        transition: background-position 0.2s;
+      }
+    }
+  }
+
+  &.c-button__specs {
+    border: 1px solid #00afef;
+    box-shadow: 0px 10px 20px 1px rgba(164, 164, 164, 0.1);
+    border-radius: 3px;
+  }
+
+  &.c-cart-add {
+    border: 2px dashed #506683;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px 1px rgba(164, 164, 164, 0.1);
+    border-radius: 3px;
+    outline: none;
+  }
+
+  &.border-red {
+    border: 1.2px solid $col-red;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.input-rounded {
+  border-radius: 3px;
+}
+
+.input-border-brown {
+  border: 1.5px solid #cbcac8;
+  border-radius: 3px;
+
+  &.indent {
+    text-indent: 10px;
+  }
+
+  &.mw {
+    max-width: 180px;
+  }
+
+  &.outline {
+    outline: none;
+  }
+
+  &.placeholder {
+    &::placeholder {
+      color: $col-gray-md;
+    }
+  }
+
+  &.appearance {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.c-checkbox {
+  height: 20px;
+  width: 20px;
+  border: 1px solid $col-blue-dark;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  outline: none;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  background-color: #ffffff;
+  &--red {
+  }
+
+  &:checked {
+    background-color: $col-red;
+    border: 0;
+  }
+
+  &:checked + label::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='20' height='20'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z' fill='rgba(255,255,255,1)'/%3E%3C/svg%3E");
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+
+  &.no-outline {
+    outline: none;
+  }
+}

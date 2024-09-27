@@ -1,0 +1,68 @@
+{
+  "name": "printivo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "babel-plugin-macros": "^3.0.1",
+    "babel-plugin-styled-components": "^1.12.0",
+    "classnames": "^2.3.1",
+    "cloudinary-core": "^2.11.3",
+    "dotenv-load": "^2.0.0",
+    "js-cookie": "^2.2.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "medium-zoom": "^1.0.6",
+    "next": "10.0.8",
+    "next-env": "^1.1.1",
+    "nprogress": "^0.2.0",
+    "nuka-carousel": "^4.7.5",
+    "numeraljs": "^1.5.6",
+    "pure-react-carousel": "^1.30.1",
+    "rc-select": "^12.1.10",
+    "react": "^17.0.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^17.0.1",
+    "react-dropzone": "^11.3.1",
+    "react-fast-marquee": "^1.6.2",
+    "react-google-recaptcha": "^2.1.0",
+    "react-icons": "^4.10.1",
+    "react-is": "^17.0.2",
+    "react-medium-image-zoom": "^5.1.1",
+    "react-multi-email": "^1.0.19",
+    "react-paginate": "^8.1.5",
+    "react-responsive-carousel": "^3.2.23",
+    "react-select": "^4.3.1",
+    "react-slick": "^0.29.0",
+    "react-toastify": "7.0.4",
+    "rsuite": "^5.47.0",
+    "sass": "^1.32.4",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.0.18",
+    "swr": "^0.4.1",
+    "toastr": "^2.1.4",
+    "twin.macro": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/react": "^17.0.11",
+    "@types/styled-components": "^5.1.10",
+    "autoprefixer": "10.0.2",
+    "postcss": "8.1.7",
+    "tailwindcss": "^2.0.2",
+    "typescript": "^4.3.4"
+  },
+  "license": "MIT",
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
+  }
+}

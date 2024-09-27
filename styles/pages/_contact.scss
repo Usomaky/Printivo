@@ -1,0 +1,75 @@
+.c-contact {
+  .c-offices {
+    .c-office {
+      max-width: 490px;
+      width: 100%;
+
+      &__btn {
+        button {
+          border: 1px solid #506683;
+          border-radius: 5px;
+          transition: color 0.2s, background 0.2s;
+
+          &:hover {
+            color: #ffffff;
+            background: #506683;
+          }
+        }
+      }
+
+      &__footer {
+        .footer-right {
+          flex-grow: 0.4;
+        }
+      }
+    }
+  }
+
+  &__form {
+    .side-image {
+      @include media("<=1200px") {
+        display: none;
+      }
+    }
+
+    form {
+      max-width: 800px;
+      background: rgba(236, 232, 217, 0.2);
+      border-radius: 3px;
+
+      label {
+        color: $col-blue-dark;
+        margin-bottom: 8px;
+        display: block;
+        font-family: "SF-reg", sans-serif;
+      }
+
+      input,
+      select {
+        height: 48px;
+      }
+
+      input,
+      select,
+      textarea {
+        outline: none;
+        width: 100%;
+        text-indent: 13px;
+        background: #ffffff;
+        border-radius: 3px;
+        border: 1px solid #cbcac8;
+        color: $col-blue-dark;
+        margin-bottom: 32px;
+
+        &::placeholder {
+          color: #b0b8c2;
+        }
+      }
+
+      .form-inner {
+        max-width: 600px;
+        width: 100%;
+      }
+    }
+  }
+}

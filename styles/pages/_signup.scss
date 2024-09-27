@@ -1,0 +1,15 @@
+.c-reseller {
+  form {
+    @include formBrown;
+  }
+
+  &__benefits {
+    max-width: 29rem;
+  }
+
+  &__data {
+    @include media(">tablet") {
+      max-width: 35rem;
+    }
+  }
+}

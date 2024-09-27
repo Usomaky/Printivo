@@ -1,0 +1,362 @@
+@mixin closeSvg {
+  button {
+    background: rgba(176, 184, 194, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.c-backdrop {
+  position: fixed;
+
+  &.active {
+    width: 100%;
+    height: 100vh;
+    z-index: 30;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--blue {
+    background: rgba($col-blue-dark, 0.2);
+  }
+
+  &--dark {
+    background: rgba(#000000, 0.3);
+  }
+}
+
+.c-modal {
+  position: absolute;
+  transition: opacity 0.3s;
+  z-index: -1;
+  width: 100%;
+  max-width: 560px;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+
+  &.active {
+    opacity: 1;
+    z-index: 50;
+  }
+
+  &--upload {
+    top: 0;
+    transform: translate(-50%, 100%);
+
+    .inner {
+      border-radius: 8px;
+    }
+
+    &__header {
+      @include closeSvg;
+    }
+
+    .c-custom {
+      &__upload {
+        height: 150px auto;
+        border: 1px dashed $col-brown;
+      }
+    }
+
+    &__body {
+      &.inactive {
+        opacity: 0.3;
+      }
+
+      .img-con {
+        max-width: 36px;
+      }
+
+      > div {
+        max-width: 350px;
+        width: 100%;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    &__status {
+      .c-progress {
+        > div {
+          display: grid;
+          > div {
+            grid-area: 1/1;
+            position: relative;
+            height: 12px;
+            border-radius: 6px;
+          }
+        }
+
+        &__background {
+          background: #f5f3ec;
+          box-shadow: inset 0px 4px 4px -1px rgba(80, 77, 77, 0.25);
+          width: 100%;
+        }
+        &__status {
+          background: $col-red;
+          transition: width 0.3s;
+          will-change: width;
+        }
+      }
+    }
+
+    &__footer {
+      button {
+        &:disabled {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  &--signin {
+    top: 16vh;
+    max-width: 550px;
+    filter: drop-shadow(0px 15px 30px rgba(65, 49, 35, 0.17));
+
+    .modal-inner {
+      border-radius: 16px;
+      width: 100%;
+      overflow: hidden;
+
+      .close-button {
+        right: 20px;
+        top: 20px;
+      }
+    }
+
+    &__image {
+      max-width: 165px;
+      width: 100%;
+
+      @include media("<=500px") {
+        display: none;
+      }
+    }
+
+    form {
+      input {
+        height: 45px;
+        text-indent: 15px;
+
+        &::placeholder {
+          color: $col-gray-md;
+        }
+      }
+    }
+  }
+
+  &--request {
+    max-width: 570px;
+    top: 11vh;
+
+    .inner {
+      border-radius: 8px;
+    }
+
+    &__header {
+      @include closeSvg;
+    }
+
+    &__body {
+      max-width: 60ch;
+      max-height: 380px;
+      overflow-y: scroll;
+
+      .inner {
+        max-width: 480px;
+      }
+
+      @include media("<=phone") {
+        max-height: 350px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray-modal;
+      }
+
+      &::-webkit-scrollbar {
+        background-color: #ffffff;
+        width: 7px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $gray-modal;
+        border-radius: 40px;
+        transition: background-color 0.5s ease-in;
+      }
+
+      &::-webkit-scrollbar-thumb:active {
+        background-color: $gray-modal;
+      }
+
+      &::-webkit-scrollbar-corner {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  // edit profile modal
+
+  &--edit__profile {
+    top: 8vh;
+    max-width: 700px;
+    filter: drop-shadow(0px 15px 30px rgba(65, 49, 35, 0.17));
+
+    .modal-inner {
+      border-radius: 0.5rem;
+      width: 100%;
+      overflow: hidden;
+
+      .close {
+        cursor: pointer;
+      }
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #ece8d9;
+    }
+
+    .body {
+      width: 100%;
+      padding: 1rem;
+
+      .image__uploader {
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-preview {
+          width: 120px;
+          height: 120px;
+          background: gray;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .save-modification {
+      width: 30%;
+      background: #d77f81;
+      color: #fff;
+      padding: 1.2rem 2rem;
+      border-radius: 3px;
+      font-size: 13px;
+      font-family: "SF Pro", sans-serif;
+      float: right;
+
+      @include media("<=tablet") {
+        width: 100%;
+      }
+    }
+
+    form {
+      input {
+        height: 45px;
+        text-indent: 15px;
+
+        &::placeholder {
+          color: $col-gray-md;
+        }
+      }
+    }
+  }
+
+  // reset password
+  &--reset-password {
+    top: 12vh;
+    max-width: 700px;
+    filter: drop-shadow(0px 15px 30px rgba(65, 49, 35, 0.17));
+
+    .modal-inner {
+      border-radius: 0.5rem;
+      width: 100%;
+      overflow: hidden;
+
+      .close {
+        cursor: pointer;
+      }
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #ece8d9;
+    }
+    .alert {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.7rem 1.3rem;
+      background: #384a62;
+    }
+
+    .body {
+      width: 100%;
+      padding: 1rem;
+
+      .image__uploader {
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-preview {
+          width: 120px;
+          height: 120px;
+          background: gray;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .save-modification {
+      width: 40%;
+      background: #d77f81;
+      color: #fff;
+      padding: 1.2rem 2rem;
+      border-radius: 3px;
+      font-size: 13px;
+      font-family: "SF Pro", sans-serif;
+      float: right;
+
+      @include media("<=tablet") {
+        width: 100%;
+      }
+    }
+
+    form {
+      input {
+        height: 45px;
+        text-indent: 15px;
+
+        &::placeholder {
+          color: $col-gray-md;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.c-hero-landing {
+  background: $col-cream;
+  // background-image: url('https://res.cloudinary.com/dtuims4ku/image/upload/v1707237220/val-banner_bk99je.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  min-height: auto;
+  max-height: auto;
+
+  &.active {
+    display: block;
+  }
+
+  @include media("<=phone") {
+    padding-bottom: 50px;
+    // height: 90vh;
+  }
+
+  &__main {
+    z-index: 1;
+    position: relative;
+    .title {
+      color: $col-blue-dark;
+      @include media(">=tablet") {
+        font-size: 4.2rem;
+      }
+    }
+
+    .sub {
+      color: $col-gray-dark;
+    }
+  }
+
+  &__image {
+    max-width: 300px;
+    right: 0;
+    bottom: 10px;
+    overflow: hidden;
+
+    @include media("<=tablet") {
+      max-width: 230px;
+    }
+    @include media("<=phone") {
+      max-width: 175px;
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      position: relative;
+      right: -20px;
+
+      @include media("<=tablet") {
+        right: 0;
+      }
+    }
+  }
+}
+
+.c-testimonials {
+  background: $col-blue-light;
+
+  &__title {
+    color: $col-blue-dark;
+  }
+
+  &__grid {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 30px;
+
+    .c-test-box {
+      background: #ffffff;
+      box-shadow: 0px 0px 0px 0.975px rgba(0, 0, 0, 0.05),
+        0px 9.75px 33.15px -15.6px rgba(0, 0, 0, 0.08);
+      border-radius: 3.9px;
+      grid-template-columns: 40px 1fr;
+      grid-gap: 15px;
+
+      .c-test__img {
+        width: 40px;
+        height: 40px;
+        background: $col-blue-dark;
+        border-radius: 50%;
+      }
+
+      .social-icon {
+        width: 30px;
+        border-radius: 50%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: -15px;
+        top: -15px;
+        background: #ffffff;
+        border: 0.729263px solid $col-cream;
+      }
+    }
+
+    .c-content {
+      color: $col-blue-dark;
+
+      .c-test-box__desc {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.c-services {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  &__title {
+    color: $col-blue-dark;
+  }
+
+  &__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+
+    @include media("<=1200px") {
+      grid-column-gap: 20px;
+    }
+    .services-box {
+      grid-template-columns: 70px 1fr;
+      grid-gap: 10px;
+
+      .c-text {
+        &__title {
+          color: $col-blue-dark;
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+
+        &__sub {
+          color: #677f9e;
+          max-width: 240px;
+          font-size: 15.5px;
+          @include media("<=tablet") {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.c-mentions {
+  background: $col-cream-light;
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+
+  &__title {
+    color: $col-blue-dark;
+  }
+
+  &__grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 60px;
+    grid-row-gap: 40px;
+
+    .c-company {
+      &__img {
+        margin-bottom: 10px;
+      }
+
+      &__link {
+        color: $col-blue-dark;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+
+.pink-header {
+  color: #D77F81;
+text-shadow: 5px 5px 10px rgba(243, 177, 205, 0.50);
+font-family: Montserrat;
+font-size: 70px;
+font-style: normal;
+font-weight: 700;
+line-height: 55px; /* 78.571% */
+text-transform: capitalize;
+
+@include media("<=phone") {
+  font-size: 10vw;
+}
+}
+
+.black-f-1 {
+color: var(--colours-font-color, #000);
+text-shadow: 5px 5px 10px rgba(243, 177, 205, 0.50);
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+
+text-transform: capitalize;
+
+@include media("<=phone") {
+  font-size: 4.5vw;
+}
+}
+
+.black-f-2 {
+  color: $col-blue-dark;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+  
+  text-transform: capitalize;
+  
+  @include media("<=phone") {
+    font-size: 8.5vw;
+    line-height: 45px;
+    font-weight: 500;
+  }
+  }
+
+.pink-color {
+  color: #D77F81;
+}

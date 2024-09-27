@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": [
+        "/components/*"
+      ],
+      "@/hooks/*": [
+        "/hooks/*"
+      ],
+      "@/services/*": [
+        "/services/*"
+      ],
+      "@/utils/*": [
+        "/utils/*"
+      ],
+      "@/elements/*": [
+        "/elements/*"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": false
+  },
+  "include": [
+    "next-env.d.ts",
+    "twin.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/link.jsx"
+, "pages/referrals/index.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,38 @@
+@mixin formBrown {
+  input,
+  select,
+  textarea {
+    border: 1px solid $col-brown;
+    background: #ffffff;
+    outline: none;
+    width: 100%;
+    text-indent: 13px;
+    margin-bottom: 20px;
+    color: $col-blue-dark;
+    font-family: "SF-reg", sans-serif;
+
+    &::placeholder {
+      color: $col-gray-md;
+    }
+  }
+
+  button {
+    border-radius: 3px;
+  }
+
+  option,
+  label {
+    font-family: "SF-reg", sans-serif;
+  }
+  input,
+  select {
+    height: 45px;
+  }
+}
+
+.select-multi{
+  background: red;
+  padding: 0px !important;
+  // height: 30px;
+
+}

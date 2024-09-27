@@ -1,0 +1,21 @@
+.c-cart {
+  &__details {
+    max-width: 670px;
+    width: 100%;
+    @include media("<=tablet") {
+      max-width: unset;
+    }
+  }
+
+  &__other {
+    max-width: 360px;
+    width: 100%;
+    background: rgba(236, 232, 217, 0.2);
+    display: table;
+    border-radius: 4px;
+
+    @include media("<=tablet") {
+      max-width: unset;
+    }
+  }
+}

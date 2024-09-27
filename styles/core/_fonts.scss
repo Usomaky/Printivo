@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF pro"),
+    url(../../assets/fonts/sf-pro-text_semibold.woff2) format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF pro"),
+    url(../../assets/fonts/SFProDisplay-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF pro"),
+    url(../../assets/fonts/SFProDisplay-Medium.woff2) format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF pro"),
+    url(../../assets/fonts/sf-pro-text_regular.woff2) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SF Pro";
+  src: local("SF pro"),
+    url(../../assets/fonts/SFProDisplay-Heavy.woff2) format("woff2");
+  font-weight: 900;
+}
+
+.font-dm {
+  font-family: "DM Serif Display", serif;
+}
+
+.font-sf {
+  font-family: "SF Pro", sans-serif;
+  font-weight: 600;
+
+  &--bold {
+    font-family: "SF Pro", sans-serif;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+  }
+
+  &--reg {
+    font-family: "SF Pro", sans-serif;
+    font-weight: 400;
+  }
+
+  &--mid {
+    font-family: "SF Pro", sans-serif;
+    font-weight: 500;
+  }
+  &--bolder {
+    font-family: "SF Pro", sans-serif;
+    font-weight: 900;
+  }
+}
+
+.font-15 {
+  font-size: 15px;
+
+  &.md-smaller {
+    @include media("<=phone") {
+      font-size: 13px;
+    }
+  }
+}
+
+.font-13 {
+  font-size: 13px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-18 {
+  font-size: 17px;
+}
+
+.font-22 {
+  font-size: 22px;
+
+  @include media("<=tablet") {
+    font-size: 1.25rem;
+  }
+}
+
+.font-32 {
+  font-size: 32px;
+
+  @include media("<=tablet") {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+}

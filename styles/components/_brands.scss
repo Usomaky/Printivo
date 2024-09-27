@@ -1,0 +1,10 @@
+.c-brands {
+  &__title {
+    color: $col-blue-dark;
+  }
+
+  &__sub {
+    color: $col-blue-md;
+    max-width: 650px;
+  }
+}

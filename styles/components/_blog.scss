@@ -1,0 +1,16 @@
+.c-blog {
+  &__grid {
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-gap: 30px;
+  }
+
+  &__post {
+    h3 {
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.c-accordion {
+  .accordion-items {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s;
+  }
+
+  .accordion-title {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &--nav {
+    .accordion-title {
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.293 13.707a1 1 0 010-1.414L5.586 7 .293 1.707A1 1 0 011.707.293l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0z' fill='%23506683'/%3E%3C/svg%3E");
+        right: 0;
+        background-position: 50%;
+        height: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-right: 20px;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+        will-change: transform;
+      }
+    }
+
+    &.active {
+      .accordion-title {
+        &::after {
+          transform: translateY(-50%) rotate(90deg);
+        }
+      }
+
+      .accordion-items {
+        max-height: 500px;
+      }
+    }
+  }
+
+  &--faq {
+    .accordion-title {
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.114 6.1c0 .5-.4.9-.9.9h-3.6v3.4c0 .5-.4.9-.9.9s-.9-.4-.9-.9V7h-3.4c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h3.4V1.6c0-.5.4-.9.9-.9s.9.4.9.9v3.6h3.6c.5 0 .9.4.9.9z' fill='%23384A62'/%3E%3C/svg%3E");
+        position: absolute;
+        content: "";
+        background-position: 50%;
+        height: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-right: 20px;
+        background-repeat: no-repeat;
+        right: 35px;
+
+        @include media("<=640px") {
+          display: none;
+        }
+      }
+    }
+
+    &.active {
+      .accordion-title {
+        &::after {
+          background-image: url("data:image/svg+xml,%3Csvg width='12' height='2' viewBox='0 0 12 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.214 1.9h-8.8c-.5 0-.9-.4-.9-.9s.4-.9.9-.9h8.8c.5 0 .9.4.9.9s-.4.9-.9.9z' fill='%23384A62'/%3E%3C/svg%3E");
+        }
+      }
+      .accordion-items {
+        max-height: 300px;
+      }
+    }
+  }
+}

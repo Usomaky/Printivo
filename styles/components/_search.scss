@@ -1,0 +1,70 @@
+.hide-results {
+  .c-search__results,
+  .c-result__empty {
+    display: none;
+  }
+}
+
+.c-form {
+  &--search {
+    button {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include media("<=phone") {
+        right: 15px;
+      }
+    }
+  }
+}
+
+.c-search {
+  .hide-scroll {
+    margin-right: -3rem;
+  }
+
+  &__results {
+    height: 200px;
+  }
+
+  .input-con {
+    max-width: 630px;
+    width: 100%;
+    position: relative;
+
+    input {
+      font-family: "SF Pro", sans-serif;
+      width: 100%;
+      outline: none;
+      padding: 30px 0;
+      text-indent: 20px;
+      border-radius: 4px;
+      border: 1px solid #e8e8e8;
+
+      @include media("<=phone") {
+        padding: 19px 0;
+      }
+
+      &::placeholder {
+        color: $col-gray-md;
+
+        @include media("<=phone") {
+          font-size: 12px;
+        }
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include media("<=phone") {
+        right: 15px;
+      }
+    }
+  }
+}
